@@ -583,6 +583,8 @@ if __name__ == "__main__":
                     num_features_combine = math.ceil(2*extract_num_features) - 2 ##chose 32 from original while actual 31
                 elif dataset == "ASCAD_variable" and leakage == "ID" and non_overfitting == False:
                     num_features_combine = math.ceil(2*extract_num_features)-2  ##chose 6 from original while actual 6
+                elif dataset == "ASCAD_variable" and leakage == "ID" and non_overfitting == True:
+                    num_features_combine = math.ceil(2 * extract_num_features) +100 ##chose 36 from original while actual 36
                 elif dataset == "ASCAD_desync50" and leakage == "ID":
                     num_features_combine = math.ceil(3*extract_num_features) +4  ##chose 32 from original while actual 32
 
